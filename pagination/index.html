@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="myTry ">
+            <div class="h11">
+            <h1>Kapucino = KRATOS</h1>
+        </div>
+            <img class ="hi" src="https://staticg.sportskeeda.com/editor/2022/01/a0b9c-16426259360282-1920.jpg?w=840" alt="Image Not found fuk">
+            <img src="https://images.indianexpress.com/2021/12/Kratos-facts-featured.jpg" alt="Image Not found fuk">
+        </div>
+        <div class="myRadio hidden">
+            <div class="h11">
+                <h1>Pantelejmon</h1>
+            </div>
+           <img src="https://media.npr.org/assets/img/2022/03/22/halo_105_0792_rt-46c374e1b2872235e833a0eded1be39dc3e2cd07-s1100-c50.jpg" alt="Image Not found fuk">
+           <img src="https://media.npr.org/assets/img/2022/03/25/halo_101_4638_rt_wide-223a04471d88e69f9d07ceac1ab6e55c87d7992d-s1400-c100.jpg" alt="Image Not found fuk">
+        </div>
+        <div class="myScreen hidden">
+            <div class="h11">
+                <h1>Memes</h1>
+            </div>
+            <img src="https://www.unilad.co.uk/wp-content/uploads/2021/09/Never-Gonna-Give-You-Up.png" alt="Image Not found fuk">
+            <img src="https://s3.amazonaws.com/rails-camp-tutorials/blog/programming+memes/programming-or-googling.jpg" alt="Image Not found fuk">
+        </div>
+        <div class="myMouse hidden">
+            <div class="h11">
+            <h1>Old train</h1>
+        </div>
+            <img class ="hi" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Kociol_parowy_lokomobilowy_typ_Ln2_skansen_kopalniatg_20070627.jpg/1200px-Kociol_parowy_lokomobilowy_typ_Ln2_skansen_kopalniatg_20070627.jpg" alt="Image Not found fuk">
+            <img src="https://prestonservices.co.uk/wp-content/uploads/Gunboat_Marine_Boiler_3.jpg" alt="Image Not found fuk">
+        </div>
+        <div class="myKey hidden">
+            <div class="h11">
+            <h1>Which cars do developers drive?</h1>
+        </div>
+            <img class ="hi" src="https://hips.hearstapps.com/hmg-prod/images/2022-ford-mustang-shelby-gt500-02-1636734552.jpg?crop=0.845xw:1.00xh;0.0657xw,0&resize=640:*" alt="Image Not found fuk">
+            <img src="https://cloudfront-us-east-1.images.arcpublishing.com/copesa/UGG64QB35RB7FO4FZNEDXYD6BU.jpeg" alt="Image Not found fuk">
+        </div>
+        <div class="myLap hidden">
+            <div class="h11">
+            <h1>Ventili u firmi</h1>
+        </div>
+            <img class ="hi" src="https://www.industrialvalvenews.com/wp-content/uploads/2015/12/42inch-valve.jpg" alt="Image Not found fuk">
+            <img src="https://previews.123rf.com/images/arhendrix/arhendrix1403/arhendrix140300042/26780319-industrial-valve-big-size-for-oil-and-gas-plant.jpg" alt="Image Not found fuk">
+        </div>
+      <div class="pagination">
+        <i class="fa-solid fa-angle-left fa-xl"></i><button class="btn1" onclick="backBtn()">Prev</button>
+        <ul>
+            <li class="link active" value="1" onclick="activeLink()">1</li>
+            <li class="link" value="2" onclick="activeLink()">2</li>
+            <li class="link" value="3" onclick="activeLink()">3</li>
+            <li class="link" value="4" onclick="activeLink()">4</li>
+            <li class="link" value="5" onclick="activeLink()">5</li>
+            <li class="link" value="6" onclick="activeLink()">6</li>
+        </ul>
+        <button class="btn2" onclick="nextBtn()">Next</button><i class="fa-solid fa-chevron-right fa-lg"></i>
+      </div> 
+    </div>
+
+    <script>
+let link = document.getElementsByClassName('link');
+let currentValue = 1; //1 zato sto je prvi element u li dobio klasu active
+const myTry = document.querySelector('.hidden');
+const myRadio = document.querySelector('.myRadio');
+const myScreen = document.querySelector('.myScreen');
+const myMouse = document.querySelector('.myMouse');
+const myKey = document.querySelector('.myKey');
+const myLap = document.querySelector('.myLap');
+
+function activeLink(){
+    for(l of link){
+        l.classList.remove("active");
+    }
+    event.target.classList.add("active");
+    currentValue = event.target.value;
+    
+    if (currentValue === 1) {
+        myTry.classList.remove('hidden');
+        myRadio.classList.add('hidden');
+        myScreen.classList.add('hidden');
+        myMouse.classList.add('hidden');
+        myKey.classList.add('hidden');
+        myLap.classList.add('hidden');
+        
+    } else if (currentValue === 2) {
+        myTry.classList.add('hidden');
+        myRadio.classList.remove('hidden');
+        myScreen.classList.add('hidden');
+        myMouse.classList.add('hidden');
+        myKey.classList.add('hidden');
+        myLap.classList.add('hidden');
+    } else if (currentValue === 3) {
+        myTry.classList.add('hidden');
+        myRadio.classList.add('hidden');
+        myScreen.classList.remove('hidden');
+        myMouse.classList.add('hidden');
+        myKey.classList.add('hidden');
+        myLap.classList.add('hidden');
+    }
+     else if (currentValue === 4) {
+        myTry.classList.add('hidden');
+        myRadio.classList.add('hidden');
+        myScreen.classList.add('hidden');
+        myMouse.classList.remove('hidden');
+        myKey.classList.add('hidden');
+        myLap.classList.add('hidden');
+    }
+    else if (currentValue === 5) {
+        myTry.classList.add('hidden');
+        myRadio.classList.add('hidden');
+        myScreen.classList.add('hidden');
+        myMouse.classList.add('hidden');
+        myKey.classList.remove('hidden');
+        myLap.classList.add('hidden');
+    }
+    else if (currentValue === 6) {
+        myTry.classList.add('hidden');
+        myRadio.classList.add('hidden');
+        myScreen.classList.add('hidden');
+        myMouse.classList.add('hidden');
+        myKey.classList.add('hidden');
+        myLap.classList.remove('hidden');
+    }
+    }
+
+    function backBtn(){
+        if (currentValue > 1){
+            for(l of link){
+        l.classList.remove("active");
+            } 
+            currentValue --;
+            link[currentValue-1].classList.add("active");
+        }
+    }
+
+    function nextBtn(){
+        if(currentValue < 6){
+            for (l of link){
+                l.classList.remove("active")
+            }
+            currentValue ++;
+            link[currentValue-1].classList.add("active");
+        }
+    }
+   
+    </script>
+
+
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>
